@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('image/back-image.png');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+
+}
+.nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 140px;
+}
+
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    
+}
+.nav ul li{
+    padding: 0 20px;
+    
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+a{
+    font-size: 1.5em;
+}
+.login-btn{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding:  14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    transition: all 0.5s;
+}
+
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 4rem;
+    color: #222;
+}
+.content p{
+    font-size: 1.2rem;
+    margin:10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+.content .btn{
+    padding: 15px 80px;
+    font-size: 1em;
+    animation-delay: 1s;
+}
+.btn:hover{
+ border-top-right-radius: 25px;
+}
+
+.feature-img{
+    width: 530px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.feature-img.anim{
+    animation-delay: 1.5s;
+}
+
+
+
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.inner-btn{
+    display: none;
+}
+.icon{
+    color: black;
+    display: none;
+}
+.icon2{
+    color: black;
+    display: none;
+}
+
+
+@media screen and (max-width:1000px){
+    .hero{
+   position: absolute;
+    }
+    .feature-img{
+        position: relative;
+       top: 0;
+    }
+    .login-btn{
+        display: none;
+    }
+    .btn2{
+        display: none;
+    }
+
+
+    .nav ul{
+        display: block;
+       position: absolute;
+       right: -100%;
+       top: 8%;
+       background-image: linear-gradient(45deg, #df4881, #c430d7);
+       color: #fff;
+       padding: 0 40px;
+       padding-bottom: 70px;
+       border-top-left-radius: 40px;
+       border-bottom-left-radius: 40px;
+       z-index: 1;
+       transition: all 0.5s ease;
+       animation-delay: 0.2s;
+       
+    }
+    .nav ul li{
+        padding: 10px 0;
+        transition: 0.2s;
+    }
+    .nav ul li:hover{
+    transform: translateX(5px);
+    }
+    .inner-btn{
+        display: block;
+    }
+    .icon{
+        display: block;
+        font-size: 2rem;
+    }
+    .icon2{
+        display: block;
+        font-size:2rem ;
+    }
+    .nav .active{
+        right: 0;
+    }
+    .disable{
+        display: none;
+    }
+
+    .hero{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+ 
+}
